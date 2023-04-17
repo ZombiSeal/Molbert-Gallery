@@ -1,0 +1,170 @@
+.btn-table {
+  width: 25px;
+  height: 25px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.basket {
+  &__wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+  }
+
+  &__btn {
+    width: 725px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+
+    &-link {
+      width: 45%;
+      padding: 15px 0;
+      text-align: center;
+    }
+  }
+
+
+}
+
+.table-container {
+  width: 100%;
+  margin-bottom: 70px;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+
+  td,
+  th{
+    text-align: center;
+    border-bottom: 1px solid $line-color;
+    padding: 20px 0;
+  }
+
+
+  th:nth-child(1) {
+    text-align: left;
+  }
+  td:nth-child(1) {
+    width: 600px;
+  }
+
+  td:nth-child(2) {
+    width: 200px;
+  }
+
+  td:nth-child(3) {
+    width: 600px;
+  }
+
+
+  td:nth-child(4) {
+    text-align: right;
+  }
+
+  &__product {
+    display: flex;
+
+    img {
+      width: 150px;
+    }
+  }
+
+  &__img-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 130px;
+    height: 160px;
+    border: 1px solid $line-color;
+    object-fit: contain;
+
+    img {
+      width: 85%;
+      height: 60%;
+    }
+  }
+
+  &__product-desc {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin-left: 30px;
+  }
+
+  &__product-title {
+    font-weight: 500;
+  }
+
+  &__product-auther{
+    font-size: $smaller-font-size;
+  }
+
+  &__size {
+    background: $acent-color-green;
+    padding: 20px;
+  }
+
+  &__count {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &-value{
+      font-size: $subtitle-font-size;
+      font-weight: 500;
+      border: 1px solid $line-color;
+      padding: 10px 40px;
+      margin: 0 20px;
+    }
+
+    &-minus {
+      background: url("../img/svg/minus.svg") no-repeat;
+    }
+
+    &-plus {
+      background: url("../img/svg/plus.svg") no-repeat;
+    }
+  }
+
+  &__close {
+    background: url("../img/svg/close.svg") no-repeat;
+  }
+}
+
+.total-price {
+  width: 725px;
+  background: $acent-color-green;
+  padding: 50px;
+
+  h2 {
+    margin-bottom: 55px;
+  }
+
+  &__subtitle {
+    font-weight: 500;
+  }
+
+  &__txt {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 20px;
+    border-bottom: 1px solid $line-color;
+  }
+
+}
+
+.buy:disabled {
+  background: transparent;
+  color: $line-color;
+  width: max-content;
+  cursor: auto;
+  border: none !important;
+}
+

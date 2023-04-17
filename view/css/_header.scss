@@ -1,0 +1,122 @@
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+  border-bottom: 30px solid #000000;
+}
+
+.nav {
+  width: (450/$container-width*100%);
+  &__list {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.func {
+  display: flex;
+  justify-content: end;
+  width: (430/$container-width*100%);
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    justify-self: end;
+  }
+
+  &__item {
+    margin-left: 20px;
+  }
+
+}
+
+.search {
+  position: relative;
+  height: 33px;
+  width: 250px;
+  border-bottom: 1px solid #000;
+
+  &__form {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: start;
+    align-items: center;
+  }
+
+  &__submit {
+    height: 25px;
+    width: 25px;
+    background: url("../img/svg/loupe.svg") no-repeat;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+
+  &__result {
+    width: 550px;
+    background: #F4F5EF;
+  }
+
+  &__row {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    border-bottom: 1px solid $line-color;
+    padding: 15px;
+
+    &:hover {
+    }
+
+
+
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+
+    .img-container {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      margin-right: 15px;
+
+      img {
+        height: inherit;
+
+      }
+    }
+  }
+
+
+  &__link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__title {
+    font-size: $subtitle-font-size;
+    font-weight: 500;
+  }
+
+  &__auther {
+    font-size: $smaller-font-size;
+  }
+
+  &__price {
+    font-size: $subtitle-font-size;
+    font-weight: 500;
+    color: $acent-color;
+  }
+
+  input {
+    border: none;
+    outline: none;
+  }
+}
+

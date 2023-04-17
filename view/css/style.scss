@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Roboto:wght@300;400;500&display=swap');
+$main-font: 'Roboto', sans-serif;
+$title-font: 'Montserrat', sans-serif;
+$main-font-size: 18px;
+$smaller-font-size: 14px;
+$title-font-size: 64px;
+$subtitle-font-size:24px;
+$main-color: #000;
+$acent-color: #FF4823;
+$line-color:#C4C4C4;
+$acent-color-green:#F4F5EF;
+$container-width: 1440;
+
+@mixin input {
+    display: block;
+    width: 100%;
+    font-size: $smaller-font-size;
+    border: 1px solid $line-color;
+    padding: 15px;
+    outline: none;
+
+    &:focus {
+      border-color: $main-color;
+    }
+}
+
+body {
+  font-family: $main-font;
+  font-size: $main-font-size;
+  font-weight: 200;
+  color:$main-color;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+
+  &_center {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+h1 {
+  font-family: $title-font;
+  font-size: $title-font-size;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-family: $main-font;
+  font-style: normal;
+  font-weight: 500;
+  font-size: $subtitle-font-size;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+
+}
+
+.title {
+  margin: 50px 0;
+}
+
+.bigger-txt{
+  font-size: $subtitle-font-size;
+}
+
+.smaller-txt {
+  font-size: $smaller-font-size;
+}
+
+.btn {
+  text-transform: uppercase;
+  background: $main-color;
+  color: #fff;
+  border: none !important;
+  outline: none;
+  cursor: pointer;
+  transition: all .5s ease-in-out;
+
+  &:hover {
+    background: $acent-color;
+  }
+}
+
+.btn_log-size-position {
+  width: 260px;
+  margin-top: 20px;
+}
+
+.btn-white {
+  text-transform: uppercase;
+  color: $main-color;
+  background: transparent;
+  border: 1px solid $main-color !important;
+  cursor: pointer;
+  transition: all .5s ease-in-out;
+
+  &:hover {
+    color: $acent-color;
+    border: 1px solid $acent-color !important ;
+  }
+}
+
+@import "null";
+@import "header";
+@import "catalog";
+@import "register";
+@import "basket";
+@import "order";
+@import "account";
+@import "admin";
+@import "page";

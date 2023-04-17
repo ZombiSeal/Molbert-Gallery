@@ -1,0 +1,179 @@
+
+.catalog {
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+  }
+
+  &__body {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__filter{
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__products {
+    display: grid;
+    gap: 60px;
+    grid-template-columns: repeat(3,1fr);
+  }
+
+}
+
+.short {
+  width: 320px;
+  height: 50px;
+  background: #F4F5EF;
+  border: none;
+  padding: 15px 20px;
+}
+
+.filter{
+
+  &__item {
+    margin-bottom: 30px;
+  }
+
+  &__title {
+    border-bottom: 1px solid $line-color;
+    margin-bottom: 30px;
+  }
+
+  &__check {
+    display: flex;
+    p {
+      margin-left: 10px;
+    }
+  }
+
+  &__price {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    input {
+      width: 45%;
+      padding: 5px 10px;
+      border: 1px solid $line-color;
+    }
+  }
+}
+
+.reset {
+  align-self: end;
+  font-weight: 500;
+  background: transparent;
+  border: none;
+  margin-bottom: 50px;
+  cursor: pointer;
+  transition: all .5s ease-in-out;
+
+  &:hover {
+    color: $acent-color;
+  }
+
+}
+
+.card {
+  width: 320px;
+  cursor: pointer;
+
+  &__img {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #C4C4C4;
+    padding: 20px 10px;
+    margin-bottom: 20px;
+
+
+    button {
+      align-self: end;
+      margin-bottom: 15px;
+    }
+
+    &-container{
+      width: 220px;
+      height: 275px;
+      display: flex;
+      align-items: center;
+      margin-bottom: 30px;
+    }
+
+  }
+
+  &__desc{
+      padding: 0 20px;
+
+    .card__auth {
+      font-size: $smaller-font-size;
+      margin-bottom: 10px;
+    }
+
+    .card__title {
+      font-weight: 500;
+      margin-bottom: 20px;
+
+      &:after{
+        content: "";
+        display: block;
+        height: 1px;
+        width: 100%;
+        background: $acent-color;
+        margin-top: 25px;
+      }
+    }
+
+    &-price {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+}
+
+.btn-icon {
+  width: 40px;
+  height: 40px;
+  border: none;
+  cursor: pointer;
+
+  &_fav {
+    background: url("../img/svg/menu_icon_heart.svg") no-repeat;
+
+  }
+
+
+  &_fav.active {
+    background: url("../img/svg/menu_icon_heart_active.svg") no-repeat;
+  }
+
+  &_buy {
+    background: url("../img/svg/basket.svg") no-repeat;
+  }
+
+}
+
+.btn-second{
+  width: 100%;
+  background: transparent;
+  color: $main-color;
+  border: 1px solid $line-color;
+  cursor: pointer;
+  padding: 10px 0;
+  transition: all .5s ease-in-out;
+
+  &:hover {
+    background: $main-color;
+    color: #fff;
+    border: none;
+  }
+}
+

@@ -1,0 +1,173 @@
+.order {
+  &__container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__col {
+    width: 45%;
+  }
+
+  &__form {
+    margin-bottom: 70px;
+  }
+
+  &__form-title{
+    margin-bottom: 20px;
+  }
+
+  &__form-item {
+    width: 100%;
+    border: 1px solid $line-color;
+    padding: 20px 50px;
+  }
+
+  &__form-radio{
+    display: flex;
+    padding: 30px 0;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid $line-color;
+    }
+
+    input[type="radio"] {
+      margin-right: 15px;
+      width: 25px;
+    }
+  }
+
+  &__product{
+
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom:1px solid $line-color ;
+
+    .img-container {
+      border: 1px solid $line-color;
+      padding: 20px 10px;
+      width: 100px;
+
+
+      img {
+        height: 85px  ;
+      }
+    }
+
+    &-desc {
+      width: 70%;
+
+      &-title{
+        font-weight: 500;
+      }
+
+      &-size {
+        display: flex;
+
+        p:first-child {
+          margin-right: 20px;
+        }
+      }
+    }
+
+    &-price {
+      font-weight: 500;
+      color: $acent-color;
+      align-self: center;
+    }
+
+  }
+
+  &__total {
+
+    background: $acent-color-green;
+    margin-top: 50px;
+    padding: 20px;
+
+    &-item {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px;
+
+      &:nth-child(2) {
+        padding-bottom: 30px;
+        border-bottom: 1px solid $line-color;
+      }
+
+      span {
+        font-weight: 500;
+      }
+    }
+
+  }
+
+  &__btn {
+    display: flex;
+    justify-content: space-between;
+
+    &-link {
+      width: 47%;
+      padding: 10px 0;
+      text-align: center;
+    }
+  }
+}
+
+.input {
+  @include input;
+}
+
+
+.adress {
+  display:none;
+  &__form-subtitle {
+    margin-bottom: 10px;
+  }
+
+  &__street{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+
+    &-name {
+      width: 70%;
+    }
+
+    &-house {
+      width: 20%;
+    }
+  }
+
+  &__city {
+    width: 70%;
+    margin-bottom: 30px;
+  }
+
+}
+
+.sale {
+  &__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 0;
+
+    &-title{
+      font-weight: 500;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    &-val {
+      width: 50%;
+      margin-bottom: 10px;
+    }
+
+    &-btn {
+      width: 50%;
+      padding: 10px 0;
+    }
+  }
+}

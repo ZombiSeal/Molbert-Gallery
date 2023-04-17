@@ -1,0 +1,185 @@
+textarea {
+  resize: none;
+}
+
+.admin-container {
+  max-width: 1800px;
+}
+.table-btn {
+  padding: 10px;
+}
+
+.btn-wrapper {
+
+    display: flex;
+    margin-top: 30px;
+
+    &-item {
+      padding: 10px;
+    }
+
+  .close-btn {
+    margin-right: 20px;
+  }
+}
+
+.form-radio {
+  display: flex;
+}
+
+
+.admin {
+  .user-account__nav{
+    ul {
+      position: sticky;
+      top: 30px;
+    }
+  }
+
+  .products-info {
+    position: relative;
+    width: 78%;
+    flex-direction: column;
+
+    &__header{
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+
+  .users-table {
+    td:last-child{
+      width: 100px;
+    }
+  }
+
+  .info{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+
+    .table-wrapper{
+      width: 60%;
+
+      td:last-child{
+        width: 100px;
+      }
+    }
+
+    .form-wrapper{
+      position: sticky;
+      top: 50px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 35%;
+      height: max-content;
+      margin-top: 65px;
+      padding: 50px;
+      border: 1px solid $line-color;
+
+      .edit-form {
+        width: 100%;
+        margin-top: 30px;
+      }
+    }
+  }
+  select {
+    background: $acent-color-green;
+    border: none;
+  }
+
+  &__info{
+    height: max-content;
+    width: 77%;
+  }
+
+  &__table{
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+
+    td,
+    th{
+      text-align: center;
+      border-bottom: 1px solid $line-color;
+      padding: 20px 0;
+    }
+
+    td {
+      font-size: 16px;
+    }
+  }
+
+  &__product-desc {
+    width: 300px;
+    overflow: hidden;
+    overflow-wrap: break-word;
+  }
+
+  &__btn-cont{
+    display: flex;
+    flex-direction: column;
+
+    .table-btn {
+      margin-bottom: 10px;
+    }
+  }
+
+}
+
+.popup-fade{
+  display: none;
+}
+
+.popup-fade:before {
+  content: '';
+  background: #000;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.7;
+  z-index: 9999;
+
+}
+
+.popup {
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  padding: 20px;
+  width: 1000px;
+  margin-left: -450px;
+  background: #fff;
+  border: 1px solid $acent-color;
+  z-index: 99999;
+  opacity: 1;
+
+  .product-body {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__wrapper{
+    width: 45%;
+  }
+
+  &__btn {
+    display: flex;
+    justify-content: end;
+
+    &-item {
+      padding: 10px;
+
+      &:last-child {
+        margin-left: 20px;
+      }
+    }
+  }
+
+
+}
+

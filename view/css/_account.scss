@@ -1,0 +1,156 @@
+@mixin account-link($url) {
+      content: "";
+      display: inline-block;
+      background: url($url) no-repeat;
+      object-fit: cover;
+      width: 30px;
+      height: 30px;
+      margin-right: 20px;
+}
+
+.user-account {
+
+  &__body {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__nav {
+    width: 20%;
+  }
+
+  &__link {
+    padding: 15px 20px;
+
+    &_data {
+      display: flex;
+      align-items: center;
+      &:before {
+        @include account-link("../img/svg/account.svg");
+      }
+    }
+
+    &_order {
+      display: flex;
+      align-items: center;
+      &:before {
+        @include account-link("../img/svg/basket.svg");
+      }
+    }
+
+    &_fav {
+      display: flex;
+      align-items: center;
+      &:before {
+        @include account-link("../img/svg/menu_icon_heart.svg");
+      }
+    }
+
+
+    &_exit {
+      display: flex;
+      align-items: center;
+      &:before {
+        @include account-link("../img/svg/logout.svg");
+      }
+    }
+
+
+    &_products {
+      display: flex;
+      align-items: center;
+      &:before {
+        @include account-link("../img/svg/products.svg");
+      }
+    }
+
+    &_sales {
+      display: flex;
+      align-items: center;
+      &:before {
+        @include account-link("../img/svg/sales.svg");
+      }
+    }
+
+    &_authers {
+      display: flex;
+      align-items: center;
+      &:before {
+        @include account-link("../img/svg/authers.svg");
+      }
+    }
+    &_active {
+      background: $acent-color-green;
+    }
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+  }
+
+  &__btn {
+    padding: 10px 20px;
+    margin-top: 30px;
+  }
+
+  &__block {
+    width: 47%;
+  }
+
+}
+
+.form-inf {
+  display: flex;
+  flex-direction: column;
+  padding: 50px;
+  border: 1px solid $line-color;
+  margin-top: 20px;
+}
+
+.order-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 15px;
+  border-bottom: 1px solid $acent-color;
+  font-weight: 500;
+
+  p{
+    width: 33%;
+    text-align: center;
+  }
+}
+
+.accordion-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 0;
+  border-bottom: 1px solid $line-color;
+  cursor: pointer;
+
+  &:hover {
+    background: $acent-color-green;
+  }
+
+  p{
+    width: 33%;
+    text-align: center;
+  }
+}
+
+.accordion-body {
+  display: none;
+}
+
+.order__product_acc {
+  background: $acent-color-green;
+  border: none;
+  padding: 20px 100px;
+}
+
+.img-container {
+  background: #fff;
+}
